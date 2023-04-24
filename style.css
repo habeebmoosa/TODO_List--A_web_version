@@ -3,11 +3,11 @@
     padding: 0;
 }
 
-body{
+body {
     background-color: bisque;
 }
 
-#heading{
+#heading {
     position: fixed;
     left: 10px;
     top: 10px;
@@ -18,7 +18,7 @@ body{
     user-select: none;
 }
 
-#addTodo{
+#addTodo {
     position: fixed;
     right: 10px;
     top: 10px;
@@ -30,53 +30,67 @@ body{
     user-select: none;
 }
 
-#container{
+#container {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-#todoContainer{
-    margin-top: 15vh;
-    /* width: 10vh; */
-}
-
-.todo{
-    margin-top: 20px;
-    margin-bottom: 20px;
+#todoContainer {
+    margin-top: 20vh;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.inputText{
-   width: 430px;
-   height: 30px;
-   font-size: 20px;
-   padding: 4px;
-   border-bottom-left-radius: 5px;
-   border-top-left-radius: 5px;
-   border: none;
+.todo {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
-.inputText:focus{
+
+.inputText {
+    width: 430px;
+    height: 30px;
+    font-size: 20px;
+    padding: 4px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: none;
+}
+
+.inputText:focus {
     outline: 0;
 }
+
 i {
-   margin: 10px 10px
+    margin: 10px 10px
 }
-.iElement{
+
+.iElement {
     display: flex;
     background-color: lightgray;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-#selectEditTodo{
+#selectEditTodo {
     display: none;
 }
 
-#empty_heading{
+#empty_heading {
     margin-top: 100px;
     color: rgba(222, 184, 135, 0.525);
     display: none;
     user-select: none;
+}
+
+@media screen and (max-width: 500px) {
+    .todo {
+        width: 90vw;
+    }
+    body{
+        touch-action: pan-y;
+    }
 }
